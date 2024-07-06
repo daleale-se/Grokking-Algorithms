@@ -1,7 +1,7 @@
 from simple_search import simple_search
 from binary_search import binary_search
 
-# You need to know how the running time(t) increases as the list size increases(n).
+# You need to know how the running time(t or growth) increases as the list size increases(n).
 # Big O notation lets you compare the number of operations(n). It tells you how fast the algorithm grows.
 # Big O notation is about the worst-case scenario.
 # O(log n) is faster than O(n), but it gets a lot faster as the list of items you’re searching grows.
@@ -30,8 +30,6 @@ def main():
     
     #simple_search_example()
     #binary_search_example()
-
-    
     
     return 0
 
