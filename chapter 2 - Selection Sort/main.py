@@ -1,13 +1,16 @@
 from classes.LinkedList import LinkedList
+from classes.Queue import Queue
+
+# Arrays: Finding the point of insertion/deletion O(1) & Performing the insertion/deletion O(n)
+# Linked List: Finding the point of insertion/deletion O(n) & Performing the insertion/deletion O(1)
 
 def print_linked_list(linked_list:LinkedList):
     current = linked_list.head
     while (not (current == None)):
         print(current.item)
         current = current.next
-
-def main():
-    
+        
+def example_linked_list():
     linked_list = LinkedList()
     linked_list.add_last(4)
     linked_list.add_last(9)
@@ -26,6 +29,34 @@ def main():
     print_linked_list(linked_list)
         
     print("length = ", linked_list.len())
+
+def print_queue(queue: Queue):
+    current = queue.front
+    while (not (current == None)):
+        print(current.item)
+        current = current.next
+    
+
+def example_queue():
+    queue = Queue()
+    queue.enqueue(5)
+    queue.enqueue(9)
+    queue.enqueue(-1)
+    queue.enqueue(3)
+    
+    print_queue(queue)
+    print("\n\n")
+    
+    queue.dequeue()
+    queue.dequeue()
+    
+    print_queue(queue)
+
+
+def main():
+    
+    #example_linked_list()
+    example_queue()
     
     return 0
 

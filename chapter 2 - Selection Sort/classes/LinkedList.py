@@ -47,16 +47,18 @@ class LinkedList:
                 self.length += 1
         else:
             print("incorrect position")
-    
+            
+    # O(1)
     def remove_first(self):
-        if (not (self.head == None)):
+        if self.head != None:
             self.head = self.head.next
             self.length -= 1
         else: 
             print("linkedlist is empty")
-        
+
+    # O(n)
     def remove_last(self):
-        if (not (self.head == None)):
+        if self.head != None:
             i = 1
             current = self.head
             while i < (self.length - 1):
@@ -66,7 +68,8 @@ class LinkedList:
             self.length -= 1
         else: 
             print("linkedlist is empty")
-            
+          
+    # O(n)
     def remove(self, pos):
         if (0 < pos < self.length):
             if pos == 1:
