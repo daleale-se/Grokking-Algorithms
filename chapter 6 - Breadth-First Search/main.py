@@ -39,7 +39,7 @@ def bfs_grokking():
 def main():
 
     # (node) : (n of edges)
-    graph = {
+    directed_graph = {
         "A": ["B", "C"],
         "B": ["J", "D"],
         "C": ["D", "F"],
@@ -58,7 +58,15 @@ def main():
         "P": []
     }
 
-    bfs(graph, "A")
+    # bfs(directed_graph, "A")
+
+    undirected_graph = {
+        "A": ["B", "C"],
+        "B": ["C"],
+        "C": ["A", "B"]
+    }
+
+    bfs(undirected_graph, "A")
 
     return True
 
