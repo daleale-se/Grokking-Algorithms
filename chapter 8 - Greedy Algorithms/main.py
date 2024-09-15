@@ -1,33 +1,17 @@
+from set_covering import set_covering
+from places_to_visit import places_to_visit
+from knapsack import knapsack
+
+# Greedy algorithms optimize locally, hoping to end up with a global optimum.
+# all these are approximation algorithms
+# Greedy algorithms are easy to write and fast to run, so they make good approximation algorithms.
+
 
 def main():
 
-    # set-covering problem (NP-complete) solved with a approximation algorithm (greedy algorthm)
-    states_needed = {"mt", "wa", "or", "id", "nv", "ut", "ca", "az"}
-    stations = {
-        "kone": {"id", "nv", "ut"},
-        "ktwo": {"wa", "id", "mt"},
-        "kthree": {"or", "nv", "ca"},
-        "kfour": {"nv", "ut"},
-        "kfive": {"ca", "az"}
-    }
-    final_stations = set()
-
-    while states_needed:
-        best_station = None
-        states_covered = set()
-        for station, states in stations.items():
-            covered = states_needed & states
-            # select subset with most states
-            if len(covered) > len(states_covered):
-                best_station = station
-                states_covered = covered
-        # reduce the set states_needed with the states_covered
-        states_needed -= states_covered
-        final_stations.add(best_station)
-
-    print(final_stations)
-
-    return
+    # set_covering()
+    # places_to_visit()
+    knapsack()
 
 
 main()
